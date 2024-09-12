@@ -4,10 +4,9 @@ import ReactDOM from "react-dom/client";
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
@@ -20,6 +19,25 @@ function Pizza() {
       <p>Tomato, mozarella, spinach, and ricotta chesse</p>
     </div>
   );
+}
+
+function Header() {
+  return <h1>Fast React Pizze Co.</h1>;
+}
+
+function Menu() {
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </div>
+  );
+}
+
+function Footer() {
+  return <footer>{new Date().toLocaleTimeString()}We're currently open</footer>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
